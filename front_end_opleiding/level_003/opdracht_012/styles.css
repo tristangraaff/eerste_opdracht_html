@@ -1,0 +1,21 @@
+.blogcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.blogpost {
+    width: 300px;
+    border: 1px solid black;
+}
+
+#dev {
+    flex-grow: 2;
+    align-self: flex-end;
+}
+
+#wildlife {
+    flex-grow: 2;
+    align-self: flex-end;
+}
+
