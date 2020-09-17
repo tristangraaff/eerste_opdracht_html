@@ -24,25 +24,34 @@ const navajoWhite = document.querySelector(".NW");
 const pink = document.querySelector(".P");
 const h1 = document.querySelector("h1");
 
+const closeSidebar = function () {
+  getSidebarUL.style.visibility = "hidden";
+  getSidebar.style.width = "50px";
+  toggleNavStatus = false;
+};
+
 antiqueWhite.addEventListener("click", function () {
   document.body.removeAttribute("class");
   document.body.classList.toggle("awbackground");
   h1.innerHTML = ("");
-  h1.innerHTML += ("The background color is... Antique White"); 
+  h1.innerHTML += ("The background color is... Antique White");
+  closeSidebar();
 });
 
 aquamarine.addEventListener("click", function () {
   document.body.removeAttribute("class");
   document.body.classList.toggle("abackground");
   h1.innerHTML = ("");
-  h1.innerHTML += ("The background color is...  Aquamarine"); 
+  h1.innerHTML += ("The background color is...  Aquamarine");
+  closeSidebar(); 
 });
 
 lawnGreen.addEventListener("click", function () {
   document.body.removeAttribute("class");
   document.body.classList.toggle("lgbackground");
   h1.innerHTML = ("");
-  h1.innerHTML += ("The background color is...  Lawn Green"); 
+  h1.innerHTML += ("The background color is...  Lawn Green");
+  closeSidebar(); 
 });
 
 navajoWhite.addEventListener("click", function () {
@@ -50,34 +59,16 @@ navajoWhite.addEventListener("click", function () {
   document.body.classList.toggle("nwbackground");
   h1.innerHTML = ("");
   h1.innerHTML += ("The background color is...  Navajo White"); 
+  closeSidebar();
 });
 
 pink.addEventListener("click", function () {
   document.body.removeAttribute("class");
   document.body.classList.toggle("pbackground");
   h1.innerHTML = ("");
-  h1.innerHTML += ("The background color is...  Pink"); 
+  h1.innerHTML += ("The background color is...  Pink");
+  closeSidebar(); 
 });
 
 
 
-/*
-// Code om aan te geven welke kleur er nu actief is (Niet af)
-
-const h1 = document.querySelector("h1");
-
-const body = document.querySelector("body");
-let backgroundIsAW = body.classList.contains("awbackground");
-let backgroundIsA = body.classList.contains("abackground");
-let backgroundIsLG = body.classList.contains("lgwbackground");
-let backgroundIsNW = body.classList.contains("nwbackground");
-let backgroundIsP = body.classList.contains("pbackground");
-
-if (backgroundIsAW === true){ 
-    h1.innerHTML += (" Antique White"); 
-}; 
-
-if (backgroundIsA === true){ 
-    h1.innerHTML += (" Aquamarine"); 
-}; 
-*/
